@@ -55,3 +55,112 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+body {
+    background-color: #212529;
+    color: #F8F9FA;
+    font-family: Figtree, sans-serif;
+    font-size: 1.1rem;
+}
+
+a {
+    color: #F8F9FA;
+    /* text-decoration: none; */
+}
+
+
+/* Top Shadow */
+#top_shadow {
+    position: fixed;
+    top: 0;
+    height: 7rem;
+    width: 100%;
+    background: linear-gradient(#212529, transparent);
+}
+
+/* Nav Bar */
+nav {
+    display: flex;
+    border: 1px solid #F8F9FA22;
+    max-width: 50rem;
+    width: 95%;
+    height: 4rem;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0  1rem 0 0.4rem; 
+    position: fixed;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #21252966;
+    backdrop-filter: blur(5px);
+}
+
+nav span {
+    font-family: "Zalando Sans Expanded", sans-serif;
+    margin-left: 0.8rem;
+    letter-spacing: 0.06rem;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0.4rem;
+}
+
+#name_and_photo {
+    display: inline-flex;
+    align-items: center;
+}
+
+#profile_pic {
+    width: 3rem;
+    height: 3rem;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+}
+
+/* Hero Section */
+header {
+    margin-top: 6rem;
+    padding: 6rem 10rem;
+    min-height: 60vh;
+    background: url("resources/heroBG_idle.png") center/cover no-repeat;
+    align-items: center;
+    align-content: center;
+    transition: 0.9s ease-in-out;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+#header_content {
+    max-width: 50rem;
+    padding-bottom: 1rem;
+}
+
+#about {
+    margin-top: 2rem;
+}
+
+#socials {
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.3rem;
+}
+
+#socials img {
+    width: 2rem;
+}
+
+#github_icon {
+    width: 2.35rem !important;
+}
