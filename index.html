@@ -1,55 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div id="top_shadow"></div>
     <nav>
-        <div id="name_and_photo">
-            <img src="resources/IMG_4327.jpg" alt="Profile Picture" id="profile_pic">
-            <span>SAMI ROUHANI</span>
-        </div>
-        <div id="links">
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
+      <div id="name_and_photo">
+        <img
+          src="resources/IMG_4327.jpg"
+          alt="Profile Picture"
+          id="profile_pic"
+        />
+        <span>SAMI ROUHANI</span>
+      </div>
+      <div id="links">
+        <ul>
+          <li class="about navLink"><a href="#about">About</a></li>
+          <li class="projects navLink"><a href="#">Projects</a></li>
+          <li class="contact navLink"><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <img src="resources/icons8-hamburger-menu.svg" id="hamburger_menu" />
     </nav>
     <section id="other_than_nav">
-        <header>
-            <div id="header_content">
-                <h1>Hi, I'm Sami!</h1>
-                <p id>Mathematical Engineering Student at <a href="https://maps.app.goo.gl/d3AqS8xpFVdLetJw7">Yıldız Techincal University</a> | Interested in Web Development | Passion for Creativity & Technology</p>
-                <div id="about">
-                    <h2>About</h2>
-                    I've always been drawn to creativity, whether it was sketching as a kid or capturing moments through photography on Instagram <a href="instagram.com/_.lifethroughmycamera._">(@.lifethroughmycamera.)</a>. My curiosity for technology grew alongside that creativity; I loved exploring how software and design come together. That passion led me to study Mathematical Engineering, combining logic with problem-solving. Now, I’m focusing on front-end development, building projects with JavaScript, HTML, and CSS, and continuously growing into a well-rounded software engineer. I’m always open to connecting with others in the tech and creative fields.
-                </div>
+      <header class="big container">
+        <div id="header_content" class="big container">
+          <h1>Hi, I'm Sami!</h1>
+          <p id>
+            Mathematical Engineering Student at
+            <a
+              href="https://maps.app.goo.gl/d3AqS8xpFVdLetJw7"
+              target="_blank"
+              class="underlined link"
+              >Yıldız Techincal University</a
+            >
+            | Growing in Web Development | Passion for Creativity &
+            Technology
+          </p>
+          <div id="about" class="small container">
+            <h2>About</h2>
+            <p>
+              I've always been drawn to creativity, whether it was sketching as
+              a kid or capturing moments through photography on Instagram (<a
+                href="instagram.com/_.lifethroughmycamera._"
+                target="_blank"
+                class="underlined link"
+                >@.lifethroughmycamera.</a
+              >). My curiosity for technology grew alongside that creativity; I
+              loved exploring how software and design come together. That
+              passion led me to study Mathematical Engineering, combining logic
+              with problem-solving. Now, I’m focusing on front-end development,
+              building projects with JavaScript, HTML, and CSS, and continuously
+              growing into a well-rounded software engineer. I’m always open to
+              connecting with others in the tech and creative fields.
+            </p>
+          </div>
 
-                <div id="socials">
-                    <a href="www.linkedin.com/in/sami-rouhani-05b490292"><img src="resources/icons8-linkedin.svg" alt="linkedIn" id="linkedIn_icon"></a>
-                    <a href="https://github.com/samirouhani"><img src="resources/icons8-github-64.png" alt="GitHub" id="github_icon"></a>
-                </div>
-            </div>
-        </header>
-        <main>
-            <section id="about_info">
-                <section id="quick_info"></section>
-            </section>
-            <section id="tech_stack"></section>
-            <section id="experience"></section>
-            <footer></footer>
-        </main>
+          <div id="socials">
+            <a href="www.linkedin.com/in/sami-rouhani-05b490292" target="_blank"
+              ><img src="resources/icons8-linkedin.svg" alt="linkedIn"
+              id="linkedIn_icon""></a
+            >
+            <a href="https://github.com/samirouhani" target="_blank"
+              ><img
+                src="resources/icons8-github-64.png"
+                alt="GitHub"
+                id="github_icon"
+            /></a>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section id="tech_stack">
+          <div id="tech_content" class="big container">
+            <h2>Tech Stack</h2>
+            <!-- HTML, CSS, JAVASCRIPT, THREEJS, GIT, GITHUB, -->
+             <div id="scroll_left_shadow"></div>
+            <ul id="tech_list">
+              <li>
+                <a href="#" id="first_tech">
+                    <img
+                        src="resources/techLogos/icons8-html.svg"
+                        alt="HTML logo"
+                        class="tech_logo"
+                    />
+                    <span>HTML</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                    <img
+                        src="resources/techLogos/icons8-css.svg"
+                        alt="CSS logo"
+                        class="tech_logo"
+                    />
+                    <span>CSS</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                    <img
+                        src="resources/techLogos/icons8-javascript.svg"
+                        alt="Javascript logo"
+                        class="tech_logo"
+                    />
+                    <span>JavaScript</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                    <img
+                        src="resources/techLogos/icons8-c-programming.svg"
+                        alt="C logo"
+                        class="tech_logo"
+                    />
+                    <span>C</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                    <img
+                        src="resources/techLogos/icons8-three.js-64.png"
+                        alt="ThreeJs logo"
+                        class="tech_logo"
+                    />
+                    <span>ThreeJS</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                    <img
+                        src="resources/techLogos/icons8-git.svg"
+                        alt="Git logo"
+                        class="tech_logo"
+                    />
+                    <span>Git</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                    <img
+                        src="resources/techLogos/icons8-github.svg"
+                        alt="GitHub logo"
+                        class="tech_logo"
+                    />
+                    <span>GitHub</span></a>
+              </li>
+              <li>
+                <a href="#">
+                  <img
+                        src="resources/techLogos/icons8-vs-code.svg"
+                        alt="VS Code logo"
+                        class="tech_logo"
+                    />
+                  <span>VS Code</span></a>
+              </li>
+              <li id="list_seperator">|</li>
+              <li>
+                <a href="#">
+                  <img
+                        src="resources/techLogos/32px-Adobe_Photoshop_Lightroom_CC_logo.svg.png"
+                        alt="Adobe Lightroom logo"
+                        class="tech_logo"
+                    />
+                  <span>Adobe Lightroom</span></a>
+              </li>
+              <li>
+                <a href="#" id="last_tech">
+                  <img
+                        src="resources/techLogos/64px-Calligrakrita-base.svg.png"
+                        alt="Krita logo"
+                        class="tech_logo"
+                    />
+                  <span>Krita</span></a>
+              </li>
+            </ul>
+            <div id="scroll_right_shadow"></div>
+          </div>
+        </section>
+        <section id="experience">
+          <div id="experience_content" class="big container">
+            <h2>Education & Experience</h2>
+            <ul>
+              <li class="first experience">
+                <h3>Yıldız Techincal University</h3>
+                  <div class="name">Mathematical Engineeing Student</div>
+                  <div class="more_info">
+                    <div class="date">07.2022 - Present</div>
+                    <img src="resources/icons8-down-arrow-24.png" alt="">
+                  </div>
+                  
+              </li>
+              <li class="second experience">
+                <h3>Technofest 2025 Competition - Finalist</h3>
+                  <div class="name">VSign Translate Project - Front-End Developer / Designer</div>
+                  <div class="more_info">
+                    <div class="date">09.2025</div>
+                    <img src="resources/icons8-down-arrow-24.png" alt="">
+                  </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div id="footer_text">Designed and created by Sami Rouhani</div>
+        <div id="footer_socials">
+          <a href="www.linkedin.com/in/sami-rouhani-05b490292" target="_blank"
+             ><img src="resources/icons8-linkedin.svg" alt="linkedIn"
+            id="footer_linkedIn_icon""></a
+          >
+          <a href="https://github.com/samirouhani" target="_blank"
+            ><img
+              src="resources/icons8-github-64.png"
+              alt="GitHub"
+              id="footer_github_icon"
+          /></a>
+        </div>
+      </footer>
     </section>
-</body>
+  </body>
 </html>
