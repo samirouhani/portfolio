@@ -1,0 +1,64 @@
+.contact.navLink {
+    font-weight: 700;
+}
+
+.contact.navLink ::after{
+    content: '';
+    width: 90%;
+    height: 1px;
+    background: #F8F9FA;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    border-radius: 50px;
+    transition: 0.15s;
+}
+
+.projects.navLink a, .about.navLink a{
+    color: #ADB5BD;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+/* Contact Info Section */ 
+
+#contact_info {
+    padding-top: 5rem;
+}
+
+#contact_info img {
+    width: 1.8rem;
+    height: auto;
+    display: inline-block;
+}
+
+#contact_github_icon {
+    width: 2.1rem !important;
+}
+
+#contact_info ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 7rem;
+    padding: 0.5rem 0.2rem;
+}
+
+#contact_info ul {
+    margin: 0.5rem 0;
+}
+
+.big.container {
+    margin: 1rem ;
+}
+
+.small.container {
+    margin-top: 3rem ;
+}
+
+#contact_info ul li a.email {
+    max-width: 50rem;
+}

@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Sami Rouhani</title>
+    <link rel="stylesheet" href="styles.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,23 +16,24 @@
       href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
     <div id="top_shadow"></div>
     <nav>
-      <div id="name_and_photo">
+      <a href="index.html" id="name_and_photo">
         <img
           src="resources/IMG_4327.jpg"
           alt="Profile Picture"
           id="profile_pic"
         />
         <span>SAMI ROUHANI</span>
-      </div>
+      </a>
       <div id="links">
         <ul>
-          <li class="about navLink"><a href="#about">About</a></li>
-          <li class="projects navLink"><a href="#">Projects</a></li>
-          <li class="contact navLink"><a href="#">Contact</a></li>
+          <li class="about navLink"><a href="index.html">About</a></li>
+          <li class="projects navLink"><a href="projects.html">Projects</a></li>
+          <li class="contact navLink"><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <img src="resources/icons8-hamburger-menu.svg" id="hamburger_menu" />
@@ -85,6 +86,7 @@
           </div>
         </div>
       </header>
+      <div class="divider header_divider"></div>
       <main>
         <section id="tech_stack">
           <div id="tech_content" class="big container">
@@ -193,22 +195,39 @@
             <div id="scroll_right_shadow"></div>
           </div>
         </section>
+        <div class="divider"></div>
         <section id="experience">
           <div id="experience_content" class="big container">
             <h2>Education & Experience</h2>
-            <ul>
-              <li class="first experience">
+            <ul class="accordion">
+              <li class="experience">
                 <h3>Yıldız Techincal University</h3>
                   <div class="name">Mathematical Engineeing Student</div>
+                  <div class="hidable_info">
+                    <ul>
+                      <li>Focus on applied math, programming, and problem-solving.</li>
+                      <li>Building a strong foundation in computational thinking and mathematical modeling.</li>
+                      <li>Relevant coursework: Data Structures, Algorithms, Numerical Analysis, etc.</li>
+                    </ul>
+                  </div>
                   <div class="more_info">
                     <div class="date">07.2022 - Present</div>
                     <img src="resources/icons8-down-arrow-24.png" alt="">
                   </div>
                   
               </li>
-              <li class="second experience">
-                <h3>Technofest 2025 Competition - Finalist</h3>
-                  <div class="name">VSign Translate Project - Front-End Developer / Designer</div>
+              <li class="experience">
+                <h3>Teknofest 2025 Competition, VSign Translate Project</h3>
+                  <div class="name">Finalist - Front-End Developer / Designer</div>
+                  <div class="hidable_info">
+                    <ul>
+                      <li>Collaborated with teammates on prototype design, presentation, and documentation.</li>
+                      <li>Experimented with Three.js for 3D avatar rendering and animation.</li>
+                      <li>Used Blender to create a 3D rigged avatar model.</li>
+                      <li>Focused on accessibility and inclusion in online education.</li>
+                      <li>Strengthened skills in front-end structure, responsive design, and teamwork.</li>
+                    </ul>
+                  </div>
                   <div class="more_info">
                     <div class="date">09.2025</div>
                     <img src="resources/icons8-down-arrow-24.png" alt="">
@@ -221,18 +240,16 @@
       <footer>
         <div id="footer_text">Designed and created by Sami Rouhani</div>
         <div id="footer_socials">
-          <a href="www.linkedin.com/in/sami-rouhani-05b490292" target="_blank"
-             ><img src="resources/icons8-linkedin.svg" alt="linkedIn"
-            id="footer_linkedIn_icon""></a
-          >
-          <a href="https://github.com/samirouhani" target="_blank"
-            ><img
-              src="resources/icons8-github-64.png"
-              alt="GitHub"
-              id="footer_github_icon"
-          /></a>
+          <a href="https://linkedin.com/in/sami-rouhani-05b490292" target="_blank" rel="noopener noreferrer">
+             <img src="resources/icons8-linkedin.svg" alt="linkedIn"
+            id="footer_linkedIn_icon"/>
+          </a>
+          <a href="https://github.com/samirouhani" target="_blank" rel="noopener noreferrer">
+            <img src="resources/icons8-github-64.png" alt="GitHub" id="footer_github_icon"/>
+          </a>
         </div>
       </footer>
     </section>
+    <script src="script.js"></script>
   </body>
 </html>

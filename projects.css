@@ -1,0 +1,20 @@
+.projects.navLink {
+    font-weight: 700;
+}
+
+.projects.navLink ::after{
+    content: '';
+    width: 90%;
+    height: 1px;
+    background: #F8F9FA;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    border-radius: 50px;
+    transition: 0.15s;
+}
+
+.about.navLink a, .contact.navLink a{
+    color: #ADB5BD;
+}
