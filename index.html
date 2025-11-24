@@ -19,6 +19,13 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
+    <section class="menu">
+      <ul>
+        <li class="about menuLink"><a href="index.html">About</a></li>
+        <li class="projects menuLink"><a href="projects.html">Projects</a></li>
+        <li class="contact menuLink"><a href="contact.html">Contact</a></li>
+      </ul>
+    </section>
     <div id="top_shadow"></div>
     <nav>
       <a href="index.html" id="name_and_photo">
@@ -38,9 +45,9 @@
       </div>
       <img src="resources/icons8-hamburger-menu.svg" id="hamburger_menu" />
     </nav>
-    <section id="other_than_nav">
+    <section id="other_than_nav" >
       <header class="big container">
-        <div id="header_content" class="big container">
+        <div id="header_content" class="big container hidden">
           <h1>Hi, I'm Sami!</h1>
           <p id>
             Mathematical Engineering Student at
@@ -86,9 +93,10 @@
           </div>
         </div>
       </header>
+    </section>
       <div class="divider header_divider"></div>
       <main>
-        <section id="tech_stack">
+        <section id="tech_stack" class="hidden">
           <div id="tech_content" class="big container">
             <h2>Tech Stack</h2>
             <!-- HTML, CSS, JAVASCRIPT, THREEJS, GIT, GITHUB, -->
@@ -196,7 +204,7 @@
           </div>
         </section>
         <div class="divider"></div>
-        <section id="experience">
+        <section id="experience" class="hidden">
           <div id="experience_content" class="big container">
             <h2>Education & Experience</h2>
             <ul class="accordion">
@@ -237,6 +245,7 @@
           </div>
         </section>
       </main>
+      <div class="divider header_divider"></div>
       <footer>
         <div id="footer_text">Designed and created by Sami Rouhani</div>
         <div id="footer_socials">

@@ -20,7 +20,7 @@
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 /* Contact Info Section */ 
@@ -33,6 +33,7 @@ h1 {
     width: 1.8rem;
     height: auto;
     display: inline-block;
+    margin-left: 0.5rem;
 }
 
 #contact_github_icon {
@@ -42,8 +43,8 @@ h1 {
 #contact_info ul li a {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    max-width: 7rem;
+    /* justify-content: space-between; */
+    /* max-width: 7rem; */
     padding: 0.5rem 0.2rem;
 }
 
@@ -52,13 +53,126 @@ h1 {
 }
 
 .big.container {
-    margin: 1rem ;
+    margin: 0 1rem ;
 }
 
 .small.container {
-    margin-top: 3rem ;
+    margin-top: 2rem ;
 }
 
-#contact_info ul li a.email {
-    max-width: 50rem;
+#contact_info a span {
+    position: relative;
+    font-weight: 600;
+}
+
+
+#contact_info a span::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    background: #f8f9fa;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+    border-radius: 50px;
+    transition: 0.15s;
+}
+
+#contact_info a:hover span::after {
+    width: 100%;
+}
+
+.big.container {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    gap: 0 10rem;
+}
+
+button {
+    display: flex;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #f8f9fa33;
+    padding: 0.2rem 0.6rem;
+    align-items: center;
+    border-radius: 24px;
+    transition: background 0.15s, border-color 0.15s;
+    color: #ADB5BD;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+}
+
+button img {
+    max-width: 0.9rem;
+    height: 0.9rem;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+}
+
+ion-icon {
+    color: #ADB5BD;
+    width: 0.9rem;
+    height: 0.9rem;
+    
+}
+
+ion-icon.check {
+    display: none;
+}
+
+button:hover {
+    background: #41474e69;
+    border-color: #ffffff44;
+}
+
+button:active {
+    background: #525961dc;
+}
+
+button:disabled {
+    background: #52596144;
+    cursor: not-allowed;
+}
+
+@media screen and (max-width: 550px) {
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #contact_info ul {
+        padding: 0 1.5rem;
+    }
+    
+    .big.container {
+        margin: 0;
+    }
+
+    #contact_info {
+        padding-top: 5rem;
+    }
+
+    .small.container {
+        margin-top: 1.5rem;
+    };
+}
+
+.menu ul li.contact {
+    font-weight: 900;
+    position: relative;
+}
+
+.menu ul li.contact::after {
+    content: '';
+    position: absolute;
+    background: #F8F9FA;
+    width: 80%;
+    height: 0.1875rem;
+    bottom: 0.375rem;
+    left: 50%;
+    border-radius: 2rem;
+    transform: translate(-50%);
 }

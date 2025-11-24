@@ -18,3 +18,20 @@
 .projects.navLink a, .contact.navLink a{
     color: #ADB5BD;
 }
+
+.menu ul li.about {
+    font-weight: 900;
+    position: relative;
+}
+
+.menu ul li.about::after {
+    content: '';
+    position: absolute;
+    background: #F8F9FA;
+    width: 80%;
+    height: 0.1875rem;
+    bottom: 0.375rem;
+    left: 50%;
+    border-radius: 2rem;
+    transform: translate(-50%);
+}

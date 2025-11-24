@@ -19,6 +19,13 @@
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
+  <section class="menu">
+    <ul>
+      <li class="about menuLink"><a href="index.html">About</a></li>
+      <li class="projects menuLink"><a href="projects.html">Projects</a></li>
+      <li class="contact menuLink"><a href="contact.html">Contact</a></li>
+    </ul>
+  </section>
   <div id="top_shadow"></div>
     <nav>
       <a href="index.html" id="name_and_photo">
@@ -39,7 +46,7 @@
       <img src="resources/icons8-hamburger-menu.svg" id="hamburger_menu" />
     </nav>
     <main>
-      <section id="contact_info">
+      <section id="contact_info"  class="hidden">
         <h1>Contact me</h1>
         <div class="big container">
           <div class="small container">
@@ -47,12 +54,17 @@
             <ul>
               <li>
                 <a href="https://linkedin.com/in/sami-rouhani-05b490292" target="_blank" rel="noopener noreferrer">
-                  linkedIn <img src="resources/icons8-linkedin.svg" alt="linkedIn" id="footer_linkedIn_icon"/>
+                  <span>linkedIn</span> <img src="resources/icons8-linkedin.svg" alt="linkedIn" id="footer_linkedIn_icon"/>
                 </a>
               </li>
               <li>
-                <a href="https://github.com/samirouhani" target="_blank" rel="noopener noreferrer"> Github
+                <a href="https://github.com/samirouhani" target="_blank" rel="noopener noreferrer"> <span>Github</span>
                   <img src="resources/icons8-github-64.png" alt="GitHub" id="contact_github_icon"/>
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/_.lifethroughmycamera._" target="_blank" rel="noopener noreferrer"> <span>Instagram (Photography)</span>
+                  <img src="resources/icons8-instagram-32.png" alt="GitHub" id="contact_github_icon"/>
                 </a>
               </li>
             </ul>
@@ -60,12 +72,21 @@
           <div class="small container">
             <h2>Contact me via:</h2>
             <ul>
-              <li><a href="mailto:samirouhani0@gmail.com" class="email">Email: samirouhani0@gmail.com</a></li>
+              <li class="email">
+                <a href="mailto:samirouhani0@gmail.com"><span class="email_address">samirouhani0@gmail.com</span></a> 
+                <button type="button" class="copy" data-copy=".email_address">
+                  <!-- <img src="resources/icons8-copy-24.png" alt="copy icon"> -->
+                   <span class="copy_label">Copy email address</span>
+                   <ion-icon name="copy-outline" class="copy_icon copy"></ion-icon>
+                   <ion-icon name="checkmark-outline" class="copy_icon check"></ion-icon>
+                </button>
+              </li>
             </ul>
           </div>
         </div>
       </section>
     </main>
+    <div class="divider header_divider"></div>
     <footer>
       <div id="footer_text">Designed and created by Sami Rouhani</div>
       <div id="footer_socials">
@@ -77,5 +98,8 @@
         </a>
       </div>
     </footer>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
 </body>
 </html>

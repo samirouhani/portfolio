@@ -88,6 +88,20 @@ a {
   text-decoration: none;
 }
 
+button {
+    all: unset;                /* nuke UA styles */
+    -webkit-appearance: none;  /* Safari */
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+button:focus-visible {
+    outline: 2px solid #F8F9FA;
+    outline-offset: 2px;
+}
+
 .divider {
   height: 1px;
   width: 100%;
@@ -209,6 +223,7 @@ nav ul {
 
 #hamburger_menu {
   display: none;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 550px) {
@@ -478,7 +493,7 @@ main {
   background: #41474edc;
 }
 
-.experience .more_info {
+.more_info {
   color: #adb5bd;
   font-size: 1rem;
   display: flex;
@@ -486,7 +501,7 @@ main {
   align-items: center;
 }
 
-.experience .more_info img {
+.more_info img {
   height: 0.8rem;
   margin-top: 0.2rem;
 }
@@ -498,6 +513,8 @@ main {
   overflow: hidden;
   overflow-y: auto;
   transition: 0.4s ease;
+  filter: blur(3px);
+  opacity: 0;
 }
 
 .hidable_info ul {
@@ -518,6 +535,7 @@ main {
     padding: 0 1rem;
   }
 }
+
 /* Footer */
 
 footer {
@@ -549,4 +567,67 @@ footer {
 
 #footer_github_icon {
   width: 1.65rem !important;
+}
+
+/* Hamburger Menu */
+
+.menu {
+  display: flex;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #1b1f22c7;
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.menu.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: scale(1.05);
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.menu ul {
+  padding: 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.menu ul li {
+  font-size: 2.5rem;
+  margin: 4rem 0;
+  list-style: none;
+}
+
+.menu ul li a:active {
+  color: #dee2e69b;
+}
+
+
+/* Animation on Scroll */
+
+.hidden {
+  opacity: 0;
+  transform: translateY(20%);
+  filter: blur(5px);
+  transition: 0.8s all ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
 }

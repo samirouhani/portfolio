@@ -19,6 +19,13 @@
     <link rel="stylesheet" href="projects.css">
 </head>
 <body>
+  <section class="menu">
+    <ul>
+      <li class="about menuLink"><a href="index.html">About</a></li>
+      <li class="projects menuLink"><a href="projects.html">Projects</a></li>
+      <li class="contact menuLink"><a href="contact.html">Contact</a></li>
+    </ul>
+  </section>
   <div id="top_shadow"></div>
     <nav>
       <a href="index.html" id="name_and_photo">
@@ -38,7 +45,51 @@
       </div>
       <img src="resources/icons8-hamburger-menu.svg" id="hamburger_menu" />
     </nav>
-    <main></main>
+    <main>
+      <section id="projects" class="hidden"> 
+        <h1>My projects</h1>
+        <div class="big container">
+          <div class="small container">
+            <h2>Featured</h2>
+            <div class="teknofest project">
+              <h3>Sign Language Translator Browser Extension (Teknofest 2025)</h3>
+              <p class="description">
+                Teknofest 2025 Barrier-Free Living Technologies finalist project. A Chrome extension & backend system that enhances video accessibility by converting spoken audio into real-time sign language avatar animations.
+              </p>
+              <div class="hidable_info">
+                <h4>Problem</h4>
+                <p>
+                  Traditional captions are not sufficient for deaf users, especially those who are born deaf, as sign language is their primary language and the most effective way of communication.<br>
+                  Existing solutions lack real-time avatar-based translation and broad platform compatibility.
+                </p>
+                <h4>Solution</h4>
+                <p>
+                  The solution is a browser extension that         automatically translates any video using a 3D animated avatar.
+                  The user can just click on the extension pop up and start seeing the translation.
+                </p>
+                <h4>Methodology</h4>
+                <p>
+                  Pipeline converts streaming audio → text (Whisper) → sign instruction mapping → avatar animation commands delivered to extension front-end.
+                </p>
+                <h4>My role</h4>
+                <p>
+                  Experimented with Three.js, trying to animate a 3D rigged avatar I made with Blender in the extension. Improved my skills in team work. Designed the logo of our team and other graphics.
+                </p>
+              </div>
+              <div class="more_info">
+                <div class="date">09.2025</div>
+                <img src="resources/icons8-down-arrow-24.png" alt="">
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="small container">
+              <h2>Other projects</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="divider header_divider"></div>
     <footer>
       <div id="footer_text">Designed and created by Sami Rouhani</div>
       <div id="footer_socials">
@@ -50,5 +101,6 @@
         </a>
       </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
