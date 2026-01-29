@@ -106,7 +106,7 @@ button:focus-visible {
   height: 1px;
   width: 100%;
   background: linear-gradient(0.25turn, transparent, #adb5bd5d, transparent);
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 
 :root {
@@ -326,7 +326,7 @@ p {
 
 @media screen and (max-width: 550px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.9rem;
   }
 
   header {
@@ -341,6 +341,10 @@ main {
 }
 
 /* Tech Stack Section */
+
+#tech_stack {
+  padding: 1rem 0;
+}
 
 #tech_content {
   position: relative;
@@ -358,12 +362,13 @@ main {
 
 #tech_list li a {
   display: flex;
+  height: 3.5rem;
   flex-shrink: 0;
   white-space: nowrap;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.55rem 0;
+  padding: 0 0.5rem;
   background: #41474e10;
   border: 1px solid #f8f9fa22;
   border-radius: 2rem;
@@ -406,7 +411,7 @@ main {
   position: absolute;
   background: linear-gradient(to left, #1b1f22, transparent);
   height: 100%;
-  width: 3rem;
+  width: 2rem;
   right: 0;
   top: 0;
 }
@@ -415,7 +420,7 @@ main {
   position: absolute;
   background: linear-gradient(to right, #1b1f22, transparent);
   height: 60%;
-  width: 3rem;
+  width: 2rem;
   left: 0;
   bottom: 0;
 }
@@ -426,11 +431,11 @@ main {
 }
 
 #first_tech {
-  margin-left: 2.5rem;
+  margin-left: 2rem;
 }
 
 #last_tech {
-  margin-right: 2.5rem;
+  margin-right: 2rem;
 }
 
 @media screen and (max-width: 1000px) {
@@ -445,7 +450,7 @@ main {
   }
 
   #first_tech {
-    margin-left: 0.8rem;
+    margin-left: 1rem;
   }
 
   #scroll_left_shadow {
