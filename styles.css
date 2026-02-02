@@ -477,6 +477,7 @@ main {
   margin-top: 3.5rem;
 }
 
+
 #experience ul.accordion {
   margin: 1.5rem 0;
   line-height: 2rem;
@@ -546,11 +547,7 @@ main {
 
   .hidable_info ul {
     margin: 1rem 0;
-    padding: 0 1rem;
-  }
-
-  .hidable_info {
-    margin-left: 0.7rem;
+    padding: 0 1rem 0 1.5rem;
   }
 }
 
