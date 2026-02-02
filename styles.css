@@ -357,6 +357,7 @@ main {
 
 #tech_content {
   position: relative;
+  timeline-scope: --techScroll;
 }
 
 #tech_list {
@@ -367,6 +368,9 @@ main {
   overflow-x: scroll;
   overflow-y: visible;
   gap: 0.75rem;
+  
+  scroll-timeline-name: --techScroll;
+  scroll-timeline-axis: inline;
 }
 
 #tech_list li a {
@@ -391,10 +395,10 @@ main {
 #tech_list li a::before,
 #tech_list li a::after {
   content: "";
-  display: block; /* ensure they become flex items */
-  width: var(--chip-side); /*left/right spacer*/
-  height: 1px; /* not visible, just occupies inline space */
-  flex: 0 0 var(--chip-side); /* lock the width */
+  display: block; 
+  width: var(--chip-side); 
+  height: 1px; 
+  flex: 0 0 var(--chip-side);
 }
 
 #tech_list li a:hover {
@@ -414,6 +418,49 @@ main {
   object-fit: contain;
   flex-shrink: 0;
   display: block;
+}
+
+#tech_list::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-indicator {
+  display: inline-block;
+  position: relative;
+  width: 5rem;
+  height: 0.3rem;
+  background-color: #dee2e634;
+  border-radius: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-indicator::after {
+  position: absolute;
+  content: "";
+  width: 35%;
+  height: 60%;
+  background-color: #c0c0c0; 
+  border-radius: 50px;
+  
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  animation: indicator forwards linear;
+  
+  animation-timeline: --techScroll; 
+  z-index: 10;
+}
+
+@keyframes indicator {
+  from {
+    left: 1%;
+  }
+
+  to {
+    left: 64%;
+  }
 }
 
 #scroll_right_shadow {
