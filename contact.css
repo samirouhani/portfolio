@@ -87,6 +87,14 @@ h1 {
     width: 100%;
 }
 
+#contact_info a:active {
+    color: #ADB5BD;
+}
+
+#contact_info a:active span::after {
+    background: #ADB5BD;
+}
+
 .big.container {
     display: flex;
     width: 80%;
@@ -160,8 +168,20 @@ button:disabled {
     }
 
     .small.container {
-        margin-top: 1.5rem;
-    };
+        margin-top: 1.8rem;
+    }
+
+    #contact_info a {
+        margin: 0.3rem 0;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+    }
+
+    #contact_info a span::after {
+        width: 100%;
+    }
 }
 
 .menu ul li.contact {

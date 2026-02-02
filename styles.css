@@ -83,6 +83,10 @@ body {
   font-size: 1.1rem;
 }
 
+::selection {
+  background-color: #918c46;
+}
+
 a {
   color: #f8f9fa;
   text-decoration: none;
@@ -113,7 +117,6 @@ button:focus-visible {
   --chip-side: 0.9rem; /* default for Safari/Firefox */
 }
 
-/* Remove your old Chromium-only block and use this instead */
 @supports (-webkit-appearance: none) and (not (font: -apple-system-body)) {
   :root {
     --chip-side: 0.5rem; /* applies in Chromium, not Safari/Firefox */
@@ -233,6 +236,12 @@ nav ul {
 
   #hamburger_menu {
     display: block;
+  }
+
+  .menu .about:active::after,
+  .menu .projects:active::after,
+  .menu .contact:active::after {
+    background: #ADB5BD;
   }
 }
 
@@ -538,6 +547,10 @@ main {
   .hidable_info ul {
     margin: 1rem 0;
     padding: 0 1rem;
+  }
+
+  .hidable_info {
+    margin-left: 0.7rem;
   }
 }
 
