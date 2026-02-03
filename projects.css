@@ -107,4 +107,15 @@ p.description {
     h1 {
         font-size: 2.9rem;
     }
+
+    .project:hover {
+        background: #41474e10;
+        border-color: #f8f9fa22;
+        transform: translateY(0);
+    }
+
+    .project:active {
+        transform: translateY(3px);
+        background: #41474edc;
+    }
 }

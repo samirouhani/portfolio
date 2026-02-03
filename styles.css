@@ -93,17 +93,17 @@ a {
 }
 
 button {
-    all: unset;                /* nuke UA styles */
-    -webkit-appearance: none;  /* Safari */
-    appearance: none;
-    display: inline-flex;
-    align-items: center;
-    cursor: pointer;
+  all: unset; /* nuke UA styles */
+  -webkit-appearance: none; /* Safari */
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 button:focus-visible {
-    outline: 2px solid #F8F9FA;
-    outline-offset: 2px;
+  outline: 2px solid #f8f9fa;
+  outline-offset: 2px;
 }
 
 .divider {
@@ -241,14 +241,14 @@ nav ul {
   .menu .about:active::after,
   .menu .projects:active::after,
   .menu .contact:active::after {
-    background: #ADB5BD;
+    background: #adb5bd;
   }
 }
 
 /* Hero Section */
 header {
   /* margin-top: 6rem; */
-  padding: 6rem 10rem;
+  padding: 6rem 8rem;
   min-height: 60vh;
   background: url("resources/heroBG_idle.png") center/cover no-repeat;
   align-items: center;
@@ -363,12 +363,12 @@ main {
 #tech_list {
   list-style: none;
   margin: 0;
-  padding: 1rem 0;
+  padding: 1rem 0 1.5rem 0;
   display: flex;
   overflow-x: scroll;
   overflow-y: visible;
   gap: 0.75rem;
-  
+  scroll-behavior: smooth;
   scroll-timeline-name: --techScroll;
   scroll-timeline-axis: inline;
 }
@@ -389,15 +389,18 @@ main {
   color: #f8f9fa;
   text-decoration: none;
   line-height: 1;
-  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.15s;
 }
 
 #tech_list li a::before,
 #tech_list li a::after {
   content: "";
-  display: block; 
-  width: var(--chip-side); 
-  height: 1px; 
+  display: block;
+  width: var(--chip-side);
+  height: 1px;
   flex: 0 0 var(--chip-side);
 }
 
@@ -421,11 +424,28 @@ main {
 }
 
 #tech_list::-webkit-scrollbar {
-  display: none;
+  height: 0.25rem;
 }
 
+#tech_list::-webkit-scrollbar-track {
+  background-color: #dee2e634;
+  border-radius: 100vw;
+  margin-inline: 30vw;
+}
+
+#tech_list::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border-radius: 100vw;
+
+}
+
+#tech_list::-webkit-scrollbar-thumb:hover {
+  background-color: #c0c0c093;
+}
+
+
 .scroll-indicator {
-  display: inline-block;
+  display: none;
   position: relative;
   width: 5rem;
   height: 0.3rem;
@@ -433,9 +453,11 @@ main {
   border-radius: 50px;
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
 }
 
-.scroll-indicator::after {
+.scroll-thumb {
+  display: none;
   position: absolute;
   content: "";
   width: 35%;
@@ -516,6 +538,25 @@ main {
   #scroll_right_shadow {
     width: 2rem;
   }
+
+  #tech_list::-webkit-scrollbar, #tech_list::-webkit-scrollbar-track, #tech_list::-webkit-scrollbar-thumb {
+    display: none;
+  }
+
+  .scroll-indicator, .scroll-thumb {
+    display: inline-block;
+  }
+
+  #tech_list li a:hover {
+    background: #41474e10;
+    border-color: #f8f9fa22;
+    transform: translateY(0);
+  }
+
+  #tech_list li a:active {
+    transform: translateY(3px);
+      background: #41474edc;
+  }
 }
 
 /* Education & Experience Section*/
@@ -523,7 +564,6 @@ main {
 #experience_content {
   margin-top: 3.5rem;
 }
-
 
 #experience ul.accordion {
   margin: 1.5rem 0;
@@ -540,7 +580,10 @@ main {
   border-radius: 1.8rem;
   border: 1px solid #f8f9fa22;
   color: #f8f9fa;
-  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.15s;
   cursor: pointer;
 }
 
@@ -595,6 +638,19 @@ main {
   .hidable_info ul {
     margin: 1rem 0;
     padding: 0 1rem 0 1.5rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #experience li.experience:hover {
+    background: #41474e10;
+    border-color: #f8f9fa22;
+    transform: translateY(0);
+  }
+
+  #experience li.experience:active {
+    transform: translateY(3px);
+    background: #41474edc;
   }
 }
 
@@ -653,7 +709,9 @@ footer {
   visibility: visible;
   pointer-events: auto;
   transform: scale(1.05);
-  transition: opacity 0.3s ease, transform 0.2s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.2s ease;
 }
 
 .menu ul {
@@ -672,7 +730,6 @@ footer {
   color: #dee2e69b;
 }
 
-
 /* Animation on Scroll */
 
 .hidden {
@@ -688,8 +745,8 @@ footer {
   filter: blur(0);
 }
 
-@media(prefers-reduced-motion) {
-  .hidden {
+@media (prefers-reduced-motion) {
+  * {
     transition: none;
   }
 }
